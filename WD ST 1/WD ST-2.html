@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Navigation</title>
+    <style>
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+            width: 100%;
+            display: block; 
+        }
+
+       
+        .nav-list {
+            list-style-type: none; 
+            margin: 0;
+            padding: 0;
+            background-color: #444;
+            overflow: auto; 
+        }
+
+        
+        .nav-item {
+            
+            float: left;
+        }
+
+        
+        .nav-item.logout {
+           
+            float: right;
+        }
+
+       
+        .nav-item a {
+            display: inline-block; 
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-right: 1px solid #555;
+        }
+        .nav-item:last-of-type:not(.logout) a {
+            
+            border-right: none;
+        }
+        .nav-item.logout a {
+            background-color: #e74c3c; 
+            border-right: none;
+            border-left: 1px solid #555; 
+        }
+
+        .nav-item a:hover {
+            background-color: #575757;
+        }
+        .nav-item.logout a:hover {
+            background-color: #c0392b;
+        } 
+        .main-content {
+            clear: both; 
+            padding: 20px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+        }
+        .example-inline {
+            background-color: yellow;
+            color: black;
+            padding: 2px; 
+            margin-right: 10px;
+            display: inline; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Experiment : My Navigation</h1>
+    </header>
+    
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+            
+            <li class="nav-item"><a href="#">Dashboard</a></li>
+            <li class="nav-item"><a href="#">Profile</a></li>
+            <li class="nav-item"><a href="#">Message</a></li>
+            
+            <li class="nav-item logout"><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h2>Main Page Content</h2>
+        <h3>The OG Content</h3>
+
+    </div>
+
+</body>
+</html>-          
+                 

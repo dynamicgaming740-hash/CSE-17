@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Experiment 6 (Nike)</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .site-header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        
+        .product-card {
+            display: flow-root; 
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        
+        .product-image-section {
+            float: left; 
+            margin-right: 30px; 
+            border: 5px solid #007bff; 
+            padding: 10px; 
+            background-color: #f9f9f9;
+        }
+
+        .product-image {
+            /* We remove the background properties when using a real image */
+            width: 350px; 
+            height: 250px; 
+            /* This is crucial for Objective 4: Set width and height */
+            object-fit: cover; 
+            display: block; 
+        }
+
+        
+        .product-details h1 {
+            color: #007bff; 
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-family: Georgia, serif; 
+        }
+
+        
+        .price-container {
+            margin: 15px 0;
+        }
+        
+        
+        .original-price {
+            font-size: 1.2em;
+            color: #888; 
+            text-decoration: line-through; 
+            margin-right: 15px;
+        }
+
+        
+        .discount-price {
+            font-size: 2.2em;
+            color: #e60000; 
+            font-weight: bold;
+        }
+
+        .description p {
+            line-height: 1.6;
+            color: #333;
+            font-size: 1em;
+        }
+        
+        
+        .add-to-cart-btn {
+            background-color: #28a745; 
+            color: white; 
+            padding: 12px 30px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 15px;
+            text-decoration: none; 
+            display: inline-block; 
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #1e7e34;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        ShoeShine Easy-eCommerce
+    </header>
+
+    <div class="container">
+        
+        <section class="product-card">
+            
+            <div class="product-image-section">
+                <img src="OIP.webp" 
+                     alt="Nike Air Zoom Pegasus Running Shoe" 
+                     class="product-image">
+                </div>
+
+            <div class="product-details">
+                
+                <h1>Nike Air Zoom Pegasus 40</h1>
+                
+                <p class="brand">*Brand:* NIKE Official</p>
+                
+                
+                <div class="price-container">
+                    <span class="original-price">₹9,999</span>
+                    <span class="discount-price">₹7,999</span>
+                </div>
+                
+                <p class="description">
+                    The *Nike Air Zoom Pegasus 40* delivers a balanced blend of comfort and responsiveness, making it ideal for daily training runs and casual wear. Featuring Nike's lightweight React foam.
+                    <br><br>
+                    Available in sizes 7 through 13.
+                </p>
+                
+                
+                <a href="#" class="add-to-cart-btn" onclick="alert('Nike Air Zoom Pegasus 40 added to your cart for ₹7,999!'); return false;">
+                    Add to Cart
+                </a>
+            </div>
+            
+        </section>
+
+    </div>
+
+</body>
+</html>

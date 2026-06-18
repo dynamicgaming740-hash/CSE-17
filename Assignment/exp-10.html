@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            flex: 1; 
+        }
+
+        .nav-center {
+            flex: 2; 
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-center a:hover {
+            color: #f39c12;
+        }
+
+        .nav-right {
+            flex: 1; 
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-right a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .login-btn {
+            background-color: #f39c12;
+            padding: 8px 15px;
+            border-radius: 4px;
+            color: #333 !important; 
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo, .nav-center, .nav-right {
+                width: 100%;
+                justify-content: center;
+                flex: auto;
+                margin-bottom: 15px;
+            }
+
+            .nav-center {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .nav-right {
+                justify-content: center;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ShopEase</div>
+
+        <ul class="nav-center">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#">Cart (0)</a>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+    <div style="padding: 20px; text-align: center;">
+        <h1>Welcome to ShopEase</h1>
+        <p>Your one-stop destination for all shopping needs.</p>
+    </div>
+
+</body>
+</html>

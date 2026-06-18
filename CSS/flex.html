@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        html,*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 1200px;
+            height: auto;
+            background-color: #999;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        header,nav,footer{
+            width: 1200px;
+            height: 100px;
+            background-color: #CCC;
+            line-height: 100px;
+        }
+
+        section{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #left{
+            flex-grow: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #right{
+            flex-grow: 1;
+            background-color: #CCC;
+        }
+        aside,article{
+            background-color: #CCC;
+            height: 250px;
+        }
+    
+
+    </style>
+</head>
+<body>
+ <!--main start-->
+<main>
+    <header><h2>Header</h2></header>
+
+    <nav><h2>Navigation</h2></nav>
+
+    <section>
+        <div id="left">
+            <aside><h2>Aside</h2></aside>
+            <article><h2>Article</h2></article>
+        </div>
+        <div id="right">right</div>
+    </section>
+
+    <footer><h2>Foooter</h2></footer>
+</main>
+ <!--main end-->
+</body>
+</html>
