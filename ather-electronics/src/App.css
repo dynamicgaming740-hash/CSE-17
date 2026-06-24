@@ -1,0 +1,351 @@
+:root {
+  --bg-primary: #fdfbf7;
+  --text-main: #1a252c;
+  --accent-gold: #d4af37;
+  --accent-hover: #b8962e;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --success-color: #2ed573;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+.top-info-bar {
+  background-color: var(--text-main);
+  color: #a0aec0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-main);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.cart-toggle-btn {
+  background-color: var(--text-main);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.cart-badge {
+  background-color: var(--accent-gold);
+  color: var(--text-main);
+  padding: 0.1rem 0.5rem;
+  border-radius: 50%;
+  font-size: 0.85rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem 2.5rem 1rem;
+  background: linear-gradient(180deg, #f5f0e6 0%, var(--bg-primary) 100%);
+}
+
+.brand-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.brand-icon {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #5a6e7f;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  outline: none;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-bar:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 20px rgba(212,175,55,0.15);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent-gold);
+  padding-left: 0.75rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #718096;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.product-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-image-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  height: 2.8rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: var(--accent-gold);
+  color: var(--text-main);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
+.cart-modal {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.empty-message {
+  color: #718096;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.cart-items-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item h4 {
+  margin: 0 0 0.25rem 0;
+}
+
+.cart-item p {
+  margin: 0;
+  color: #4a5568;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #e53e3e;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cart-summary {
+  border-top: 2px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: var(--text-main);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--text-main);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2000;
+  animation: slideIn 0.3s ease-out;
+  border-left: 4px solid var(--success-color);
+}
+
+.toast-notification p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.toast-icon {
+  font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
